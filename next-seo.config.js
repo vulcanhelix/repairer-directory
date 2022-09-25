@@ -1,10 +1,10 @@
-const description = `Learn how to build modern marketing websites, with localization and SEO, using Hygraph, NextJS, Chakra UI, and Vercel.`
-const title = `Build Modern Marketing Websites with a Headless CMS`
-const url = `https://marketing-websites.withheadlesscms.com`
+const description = `Generate Endless leads with Modern Marketing Strategies designed for success`
+const title = `Growth Strategy - They sell websites, we build lead generation machines`
+const url = `https://growthstrategy.co.za`
 
 const seo = {
   title,
-  titleTemplate: '%s | Hygraph',
+  titleTemplate: '%s | Growth Strategy',
   description,
   openGraph: {
     description,
@@ -13,8 +13,8 @@ const seo = {
     url
   },
   twitter: {
-    handle: '@Hygraphcom',
-    site: '@Hygraphcom'
+    handle: '@realbrucemartin',
+    site: '@realbrucemartin'
   }
 }
 

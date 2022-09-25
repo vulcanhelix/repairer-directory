@@ -7,6 +7,44 @@ import {
   Button,
   Input
 } from '@chakra-ui/react'
+import {
+  FormControl,
+  FormErrorMessage,
+  FormHelperText,
+} from '@chakra-ui/react'
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Formik, Field, Form } from 'formik';
+
+const Basic = () => (
+  <div>
+    <Formik
+      initialValues={{
+        email: '',
+      }}
+      onSubmit={async (values) => {
+        await new Promise((r) => setTimeout(r, 500));
+        alert(JSON.stringify(values, null, 2));
+      }}
+    >
+      <Form>
+
+        <label htmlFor="email">Email</label>
+        <Field
+          id="email"
+          name="email"
+          placeholder="jane@acme.com"
+          type="email"
+        />
+        <button type="submit">Submit</button>
+      </Form>
+    </Formik>
+  </div>
+);
+
+
+
 
 export default function NewsletterSignup({ ctaLabel, subtitle, title }) {
   return (
