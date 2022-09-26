@@ -28,3 +28,4 @@ export async function getStaticProps({ locale, preview = false }) {
 }
 
 IndexPage.getLayout = getPageLayout
+
