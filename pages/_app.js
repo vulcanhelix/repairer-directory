@@ -83,6 +83,11 @@ export default function App({ Component, pageProps }) {
 
 `}
       </Script>
+      <Script>
+        {`
+        (function(){window.ldbrry = window.ldbrry || {};(function(dom, s, ss, root){root = dom.getElementsByTagName(s)[0];function cltr(src){var image = dom.createElement(s);image.src = src;setTimeout(function(){root.parentNode.insertBefore(image, root)}, 1);}cltr(ss);})(document, 'script', 'https://app.leadberry.com/trackers/lb-24688-24688-110142.js');})();
+          `}
+      </Script>
 
       <DefaultSeo {...defaultSEO} />
       {getLayout(<Component {...pageProps} />)}
