@@ -88,6 +88,11 @@ export default function App({ Component, pageProps }) {
         (function(){window.ldbrry = window.ldbrry || {};(function(dom, s, ss, root){root = dom.getElementsByTagName(s)[0];function cltr(src){var image = dom.createElement(s);image.src = src;setTimeout(function(){root.parentNode.insertBefore(image, root)}, 1);}cltr(ss);})(document, 'script', 'https://app.leadberry.com/trackers/lb-24688-24688-110142.js');})();
           `}
       </Script>
+      {/* //SalesHub Tracking Code */}
+      <Script>
+      async  (function(w, d) {    d.addEventListener("DOMContentLoaded", function () {      var token = "b2f7727b-802f-44d2-aaf1-10c4d130cff4";      var script = d.createElement('script');      script.async = true;      script.src = "https://track.saleshub.ai/assets/for-cache.min.js?authorization=b2f7727b-802f-44d2-aaf1-10c4d130cff4";      script.onload = function () {        w.salesToolsObserverCached(token);      };      d.body.appendChild(script);    })  })(window, document)
+      </Script>
+
 
       <DefaultSeo {...defaultSEO} />
       {getLayout(<Component {...pageProps} />)}
