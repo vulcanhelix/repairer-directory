@@ -200,7 +200,7 @@ export default function BlogPost({ nextPost, post, previousPost }) {
               </Stack>
             )}
             <Box pt={8}>
-              <NextLink href="/blog">
+              <NextLink href="/blog" passHref>
                 <Link
                   color="indigo.500"
                   _hover={{
