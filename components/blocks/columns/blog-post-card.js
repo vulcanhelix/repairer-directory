@@ -42,7 +42,7 @@ export default function BlogPostCard({
           <Text fontSize="sm" fontWeight="medium" color="indigo.600">
             {startCase(category.toLowerCase())}
           </Text>
-          <NextLink href={`/blog/${slug}`}>
+          <NextLink href={`/blog/${slug}`} passHref>
             <Link
               display="block"
               mt={2}
