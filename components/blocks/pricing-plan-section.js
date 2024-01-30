@@ -1,4 +1,4 @@
-import { useState } from 'react'
+/*import { useState } from 'react'
 import { Button, Box, Stack } from '@chakra-ui/react'
 
 import { Grid } from '@/blocks'
@@ -76,4 +76,4 @@ export default function PricingPlanSection({ page, ...grid }) {
       </Grid>
     </>
   )
-}
+}*/
