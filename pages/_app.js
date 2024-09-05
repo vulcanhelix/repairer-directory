@@ -15,31 +15,17 @@ export default function App({ Component, pageProps }) {
 
   return (
     <ChakraProvider theme={theme}>
-   <Script id="adroll" strategy="afterInteractive">
-      {`
-      adroll_adv_id = "VYRS2RCQKJDCJM6PMZS3KB"; 
-      adroll_pix_id = "4MKESY7NCNAN7I37LSKIC7"; 
-      adroll_version = "2.0";  
-      (function(w, d, e, o, a) 
-        { w.__adroll_loaded = true; w.adroll = w.adroll || []; 
-          w.adroll.f = [ 'setProperties', 'identify', 'track' ]; 
-          var roundtripUrl = "https://s.adroll.com/j/" + adroll_adv_id + "/roundtrip.js"; 
-          for (a = 0; a < w.adroll.f.length; a++) { w.adroll[w.adroll.f[a]] = w.adroll[w.adroll.f[a]] || (function(n) { return function() { w.adroll.push([ n, arguments ]) } })(w.adroll.f[a]) }  e = d.createElement('script'); 
-          o = d.getElementsByTagName('script')[0]; e.async = 1; e.src = roundtripUrl; o.parentNode.insertBefore(e, o); 
-          })(window, document); adroll.track("pageView");
-      `}  
-      </Script>
-       <Script
-          strategy="afterInteractive"
+      <Script
+        strategy="afterInteractive"
         src={"https://www.googletagmanager.com/ns.html?id=G-DYNE082NCJ"}
       />
       <Script id="google-analytics" strategy="afterInteractive">
-    {`
+        {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-DYNE082NCJ');
-    `}
+        `}
       </Script>
       <Script strategy="afterInteractive">
         {`
@@ -48,7 +34,6 @@ export default function App({ Component, pageProps }) {
         analytics.page();
         }}();
         `}
-
       </Script>
       <Script>
         {`
@@ -82,36 +67,26 @@ export default function App({ Component, pageProps }) {
         {`
           !function(t,e,r,c,a,n,s){t.ClAnalyticsObject=a,t[a]=t[a]||[],t[a].methods=["trackSubmit","trackClick","pageview","identify","track"],t[a].factory=function(e){return function(){var r=Array.prototype.slice.call(arguments);return r.unshift(e),t[a].push(r),t[a]}};for(var i=0;i<t[a].methods.length;i++){var o=t[a].methods[i];t[a][o]=t[a].factory(o)};n=e.createElement(r),s=e.getElementsByTagName(r)[0],n.async=1,n.crossOrigin="anonymous",n.src=c,s.parentNode.insertBefore(n,s)}(window,document,"script","//cdn.js.customerlabs.co/cl1055pqcblp6p.js","_cl");_cl.SNIPPET_VERSION="1.0.0"
           `}
-        
-        
       </Script>
       <Script>
-      
-      {`
-  (function (d, u, h, s) {
-    h = d.getElementsByTagName('head')[0];
-    s = d.createElement('script');
-    s.async = 1;
-    s.src = u + new Date().getTime();
-    h.appendChild(s);
-  })(document, 'https://grow.clearbitjs.com/api/pixel.js?v=');
-
-`}
+        {`
+        (function (d, u, h, s) {
+          h = d.getElementsByTagName('head')[0];
+          s = d.createElement('script');
+          s.async = 1;
+          s.src = u + new Date().getTime();
+          h.appendChild(s);
+        })(document, 'https://grow.clearbitjs.com/api/pixel.js?v=');
+        `}
       </Script>
       <Script>
         {`
         (function(){window.ldbrry = window.ldbrry || {};(function(dom, s, ss, root){root = dom.getElementsByTagName(s)[0];function cltr(src){var image = dom.createElement(s);image.src = src;setTimeout(function(){root.parentNode.insertBefore(image, root)}, 1);}cltr(ss);})(document, 'script', 'https://app.leadberry.com/trackers/lb-24688-24688-110142.js');})();
-          `}
+        `}
       </Script>
-     
-     
-
 
       <DefaultSeo {...defaultSEO} />
       {getLayout(<Component {...pageProps} />)}
-     
     </ChakraProvider>
   )
 }
-
-

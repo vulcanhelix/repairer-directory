@@ -3,11 +3,8 @@ import { Box, Heading, Text, Link, Stack } from '@chakra-ui/react'
 import { CheckIcon } from '@/icons'
 
 export default function PricingPlanCard({
-  annualPrice,
-  billingPeriod,
   description,
   included,
-  monthlyPrice,
   name
 }) {
   return (
@@ -30,23 +27,14 @@ export default function PricingPlanCard({
         <Text mt={4} fontSize="sm" lineHeight="5" color="gray.500">
           {description}
         </Text>
-        <Text mt={8}>
-          <Text
-            as="span"
-            fontWeight="extrabold"
-            fontSize="4xl"
-            lineHeight="shorter"
-            color="gray.900"
-          >
-            {new Intl.NumberFormat('en-US', {
-              style: 'currency',
-              currency: 'USD',
-              minimumFractionDigits: 0
-            }).format(billingPeriod === 'monthly' ? monthlyPrice : annualPrice)}
-          </Text>
-          <Text as="span" fontSize="md" fontWeight="medium" color="gray.500">
-            {billingPeriod === 'monthly' ? '/mo' : '/yr'}
-          </Text>
+        <Text
+          mt={8}
+          fontWeight="bold"
+          fontSize="xl"
+          lineHeight="shorter"
+          color="gray.900"
+        >
+          Contact Sales
         </Text>
         <Link
           href="#"
@@ -65,7 +53,7 @@ export default function PricingPlanCard({
             bg: 'indigo.700'
           }}
         >
-          Buy {name}
+          Contact Sales
         </Link>
       </Box>
       <Box pt={6} pb={8} px={6}>
